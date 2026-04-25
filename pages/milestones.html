@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AyuCeylon – Milestones</title>
+
+  <link rel="stylesheet" href="../styles/index.css" />
+  <link rel="stylesheet" href="../styles/milestones.css" />
+  <link rel="stylesheet" href="../styles/aboutus.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:wght@400;600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+
+<body>
+
+  <div class="particles" id="particles"></div>
+
+   <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-left">
+      
+      <a href="domain.html" class="nav-link"><i class="fas fa-lock"></i> Domain</a>
+      <a href="milestones.html" class="nav-link"><i class="fas fa-seedling"></i>Milestones</a>
+      <a href="documents.html" class="nav-link"><i class="fas fa-file-alt"></i> Documents</a>
+    </div>
+    <a href="index.html" class="nav-logo">
+      <div class="logo-emblem">
+        <svg viewBox="0 0 60 60" width="50" height="50">
+          <polygon points="30,2 56,16 56,44 30,58 4,44 4,16" fill="none" stroke="#c8a951" stroke-width="1.5"/>
+          <polygon points="30,8 50,19 50,41 30,52 10,41 10,19" fill="none" stroke="#4caf50" stroke-width="1" opacity="0.6"/>
+          <circle cx="30" cy="30" r="8" fill="none" stroke="#c8a951" stroke-width="1.5"/>
+          <line x1="30" y1="18" x2="30" y2="42" stroke="#c8a951" stroke-width="1" opacity="0.6"/>
+          <line x1="18" y1="30" x2="42" y2="30" stroke="#c8a951" stroke-width="1" opacity="0.6"/>
+        </svg>
+      </div>
+      <div class="logo-text">
+        <span class="logo-ayur">Ayu</span><span class="logo-ai">Ceylon</span>
+        <p class="logo-tagline">Ancient Wisdom. AI Intelligence.</p>
+      </div>
+    </a>
+    <div class="nav-right">
+     
+      <a href="presentations.html" class="nav-link"><i class="fas fa-file-powerpoint"></i> Presentations</a>
+      <a href="aboutus.html" class="nav-link"><i class="fas fa-users"></i> About Us</a>
+      <a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact Us</a>
+    </div>
+  </nav>
+
+
+  <!-- ===== HERO ===== -->
+  <section class="milestones-hero">
+    <div class="milestones-hero-overlay"></div>
+    <div class="milestones-hero-content">
+      <h1>Project Milestones</h1>
+      <h2>Research Group: 25-26J-232</h2>
+      <div class="hero-divider"><span class="divider-ornament">❧ ✦ ❧</span></div>
+      <p>View the key assessments, submission dates, and allocated marks for each project milestone.</p>
+    </div>
+  </section>
+
+  <!-- ===== MILESTONES ===== -->
+  <section class="milestones-section">
+
+    <div class="section-header">
+      <div class="section-ornament">❧✦</div>
+      <h2 class="section-title">Assessment Timeline</h2>
+      <p class="section-subtitle">Select a milestone to view details</p>
+    </div>
+
+    <div class="milestone-select-box">
+      <label for="milestoneSelect">Choose Milestone</label>
+      <select id="milestoneSelect" onchange="showMilestone(this.value)">
+        <option value="proposal">Project Proposal</option>
+        <option value="progress1">Progress Presentation 1</option>
+        <option value="progress2">Progress Presentation 2</option>
+        <option value="final">Final Assessment</option>
+        <option value="viva">Viva</option>
+      </select>
+    </div>
+
+    <div class="milestone-details">
+
+      <div class="milestone-card active" id="proposal">
+        <div class="milestone-icon"><i class="fas fa-file-signature"></i></div>
+        <h3>Project Proposal</h3>
+        <p>
+          The project proposal assessment evaluates the initial research idea, problem background,
+          objectives, scope, literature review, methodology, and feasibility of the proposed solution.
+        </p>
+        <div class="milestone-meta">
+          <span><i class="fas fa-calendar"></i> Date: 2025-08-15</span>
+          <span><i class="fas fa-star"></i> Marks: 12%</span>
+        </div>
+      </div>
+
+      <div class="milestone-card" id="progress1">
+        <div class="milestone-icon"><i class="fas fa-chart-line"></i></div>
+        <h3>Progress Presentation 1</h3>
+        <p>
+          This assessment reviews the first stage of implementation, including system design,
+          research progress, completed modules, technical approach, and planned improvements.
+        </p>
+        <div class="milestone-meta">
+          <span><i class="fas fa-calendar"></i> Date: 2025-10-10</span>
+          <span><i class="fas fa-star"></i> Marks: 15%</span>
+        </div>
+      </div>
+
+      <div class="milestone-card" id="progress2">
+        <div class="milestone-icon"><i class="fas fa-chart-simple"></i></div>
+        <h3>Progress Presentation 2</h3>
+        <p>
+          This assessment focuses on advanced implementation progress, model development,
+          testing results, system integration, and individual contribution of each team member.
+        </p>
+        <div class="milestone-meta">
+          <span><i class="fas fa-calendar"></i> Date: 2026-01-20</span>
+          <span><i class="fas fa-star"></i> Marks: 18%</span>
+        </div>
+      </div>
+
+      <div class="milestone-card" id="final">
+        <div class="milestone-icon"><i class="fas fa-award"></i></div>
+        <h3>Final Assessment</h3>
+        <p>
+          The final assessment evaluates the complete research project, final system implementation,
+          testing and evaluation, documentation, research contribution, and final deliverables.
+        </p>
+        <div class="milestone-meta">
+          <span><i class="fas fa-calendar"></i> Date: 2026-04-05</span>
+          <span><i class="fas fa-star"></i> Marks: 40%</span>
+        </div>
+      </div>
+
+      <div class="milestone-card" id="viva">
+        <div class="milestone-icon"><i class="fas fa-comments"></i></div>
+        <h3>Viva</h3>
+        <p>
+          The viva assessment evaluates individual understanding, research knowledge,
+          technical implementation, contribution, problem-solving ability, and presentation confidence.
+        </p>
+        <div class="milestone-meta">
+          <span><i class="fas fa-calendar"></i> Date: 2026-04-20</span>
+          <span><i class="fas fa-star"></i> Marks: 15%</span>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="about-footer">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <span class="logo-ayur">Ayu</span><span class="logo-ai">Ceylon</span>
+      </div>
+      <p class="footer-tagline">Ancient Wisdom. AI Intelligence.</p>
+      <div class="footer-divider"></div>
+      <p class="footer-copy">&copy; 2025 AyurAI. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    function showMilestone(id) {
+      const cards = document.querySelectorAll('.milestone-card');
+      cards.forEach(card => card.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+
+  <script src="../js/index.js"></script>
+</body>
+</html>
