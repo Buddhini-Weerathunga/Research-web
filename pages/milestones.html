@@ -72,36 +72,55 @@
     <div class="milestone-select-box">
       <label for="milestoneSelect">Choose Milestone</label>
       <select id="milestoneSelect" onchange="showMilestone(this.value)">
-        <option value="proposal">Project Proposal</option>
-        <option value="progress1">Progress Presentation 1</option>
-        <option value="progress2">Progress Presentation 2</option>
-        <option value="ResearchPaper">Research Paper</option>
-        <option value="Final">Final Report & Presentation</option>
-        <option value="checklist">Checklist Documents</option>
+        <option value="proposalPresentation">Proposal Presentation</option>
+        <option value="proposalReport">Proposal Report</option>
+        <option value="progress1">Progress Presentation-1 (50%)</option>
+        <option value="progress2">Progress Presentation-2 (90%)</option>
+        <option value="finalReport">Final Report</option>
+        <option value="finalReportGroup">Final Report (Group)</option>
+        <option value="finalPresentation">Final Presentation</option>
+        <option value="viva">Viva</option>
+        <option value="website">Website</option>
+        <option value="researchPaper">Research Paper</option>
+        <option value="checkLists">Check Lists</option>
+        <option value="logbook">Logbook</option>
       </select>
     </div>
 
     <div class="milestone-details">
 
-      <div class="milestone-card active" id="proposal">
-        <div class="milestone-icon"><i class="fas fa-file-signature"></i></div>
-        <h3>Project Proposal</h3>
+      <div class="milestone-card active" id="proposalPresentation">
+        <div class="milestone-icon"><i class="fas fa-file-powerpoint"></i></div>
+        <h3>Proposal Presentation</h3>
         <p>
-          The project proposal assessment evaluates the initial research idea, problem background,
-          objectives, scope, literature review, methodology, and feasibility of the proposed solution.
+          Initial proposal presentation covering the project problem, motivation,
+          objectives, scope, and proposed technical direction.
         </p>
         <div class="milestone-meta">
           <span><i class="fas fa-calendar"></i> Date: 2025-08-15</span>
-          <span><i class="fas fa-star"></i> Marks: 12%</span>
+          <span><i class="fas fa-star"></i> Marks: 6%</span>
+        </div>
+      </div>
+
+      <div class="milestone-card" id="proposalReport">
+        <div class="milestone-icon"><i class="fas fa-file-alt"></i></div>
+        <h3>Proposal Report</h3>
+        <p>
+          Written proposal report detailing background study, problem statement,
+          literature review, methodology, and feasibility of the project.
+        </p>
+        <div class="milestone-meta">
+          <span><i class="fas fa-calendar"></i> Date: 2025-08-15</span>
+          <span><i class="fas fa-star"></i> Marks: 6%</span>
         </div>
       </div>
 
       <div class="milestone-card" id="progress1">
         <div class="milestone-icon"><i class="fas fa-chart-line"></i></div>
-        <h3>Progress Presentation 1</h3>
+        <h3>Progress Presentation-1 (50%)</h3>
         <p>
-          This assessment reviews the first stage of implementation, including system design,
-          research progress, completed modules, technical approach, and planned improvements.
+          Midpoint progress evaluation covering implemented modules, research status,
+          system design updates, and next-phase planning.
         </p>
         <div class="milestone-meta">
           <span><i class="fas fa-calendar"></i> Date: 2025-10-10</span>
@@ -111,10 +130,10 @@
 
       <div class="milestone-card" id="progress2">
         <div class="milestone-icon"><i class="fas fa-chart-simple"></i></div>
-        <h3>Progress Presentation 2</h3>
+        <h3>Progress Presentation-2 (90%)</h3>
         <p>
-          This assessment focuses on advanced implementation progress, model development,
-          testing results, system integration, and individual contribution of each team member.
+          Advanced progress review at near-completion stage, including integration,
+          testing outcomes, optimization, and final refinements.
         </p>
         <div class="milestone-meta">
           <span><i class="fas fa-calendar"></i> Date: 2026-01-20</span>
@@ -122,42 +141,107 @@
         </div>
       </div>
 
-      <div class="milestone-card" id="ResearchPaper">
+      <div class="milestone-card" id="finalReport">
+        <div class="milestone-icon"><i class="fas fa-file-lines"></i></div>
+        <h3>Final Report</h3>
+        <p>
+          Comprehensive individual final report including project implementation,
+          evaluation, analysis, and conclusions.
+        </p>
+        <div class="milestone-meta">
+          <span><i class="fas fa-calendar"></i> Date: 2026-04-05</span>
+          <span><i class="fas fa-star"></i> Marks: 15%</span>
+        </div>
+      </div>
+
+      <div class="milestone-card" id="finalReportGroup">
+        <div class="milestone-icon"><i class="fas fa-users"></i></div>
+        <h3>Final Report (Group)</h3>
+        <p>
+          Group-level final report summarizing shared architecture, integration,
+          collaborative outcomes, and collective project contribution.
+        </p>
+        <div class="milestone-meta">
+          <span><i class="fas fa-calendar"></i> Date: 2026-04-05</span>
+          <span><i class="fas fa-star"></i> Marks: 4%</span>
+        </div>
+      </div>
+
+      <div class="milestone-card" id="finalPresentation">
+        <div class="milestone-icon"><i class="fas fa-file-powerpoint"></i></div>
+        <h3>Final Presentation</h3>
+        <p>
+          Final presentation demonstrating the completed solution,
+          key results, research contribution, and future enhancements.
+        </p>
+        <div class="milestone-meta">
+          <span><i class="fas fa-calendar"></i> Date: 2026-04-05</span>
+          <span><i class="fas fa-star"></i> Marks: 10%</span>
+        </div>
+      </div>
+
+      <div class="milestone-card" id="viva">
+        <div class="milestone-icon"><i class="fas fa-comments"></i></div>
+        <h3>Viva</h3>
+        <p>
+          Oral examination assessing individual understanding, technical decisions,
+          research knowledge, and confidence in explaining the work.
+        </p>
+        <div class="milestone-meta">
+          <span><i class="fas fa-calendar"></i> Date: 2026-04-20</span>
+          <span><i class="fas fa-star"></i> Marks: 10%</span>
+        </div>
+      </div>
+
+      <div class="milestone-card" id="website">
+        <div class="milestone-icon"><i class="fas fa-globe"></i></div>
+        <h3>Website</h3>
+        <p>
+          Project website containing milestone details, deliverables,
+          and organized project information for evaluation.
+        </p>
+        <div class="milestone-meta">
+          <span><i class="fas fa-calendar"></i> Date: 2026-04-05</span>
+          <span><i class="fas fa-star"></i> Marks: 2%</span>
+        </div>
+      </div>
+
+      <div class="milestone-card" id="researchPaper">
         <div class="milestone-icon"><i class="fas fa-book-open"></i></div>
         <h3>Research Paper</h3>
         <p>
-          Includes the final research manuscript with literature, methodology, implementation,
-          evaluation results, and conclusions prepared for formal submission.
+          Final research paper prepared for submission with methodology,
+          findings, analysis, and documented contribution.
         </p>
         <div class="milestone-meta">
           <span><i class="fas fa-calendar"></i> Date: 2026-04-05</span>
-          <span><i class="fas fa-star"></i> Marks: Included in Final Assessment</span>
+          <span><i class="fas fa-star"></i> Marks: 10%</span>
         </div>
       </div>
 
-      <div class="milestone-card" id="Final">
-        <div class="milestone-icon"><i class="fas fa-file-powerpoint"></i></div>
-        <h3>Final Report &amp; Presentation</h3>
-        <p>
-          Contains the complete project report and final presentation materials summarizing
-          research outcomes, implementation details, and overall contribution.
-        </p>
-        <div class="milestone-meta">
-          <span><i class="fas fa-calendar"></i> Date: 2026-04-05</span>
-          <span><i class="fas fa-star"></i> Marks: Included in Final Assessment</span>
-        </div>
-      </div>
-
-      <div class="milestone-card" id="checklist">
+      <div class="milestone-card" id="checkLists">
         <div class="milestone-icon"><i class="fas fa-list-check"></i></div>
-        <h3>CheckList Documents</h3>
+        <h3>Check Lists</h3>
         <p>
-          Submission checklists and supporting verification documents required to confirm
-          completeness and compliance with assessment requirements.
+          Required checklist documents confirming completion and
+          readiness of all components for final submission.
         </p>
         <div class="milestone-meta">
           <span><i class="fas fa-calendar"></i> Date: 2026-04-05</span>
-          <span><i class="fas fa-star"></i> Marks: Included in Final Assessment</span>
+          <span><i class="fas fa-star"></i> Marks: 2%</span>
+        </div>
+      </div>
+
+      <div class="milestone-card" id="logbook">
+        <div class="milestone-icon"><i class="fas fa-book"></i></div>
+        <h3>Logbook</h3>
+        <p>
+          Chronological progress log of weekly tasks, decisions,
+          technical updates, and project tracking records.
+        </p>
+        <div class="milestone-meta">
+          <span><i class="fas fa-calendar"></i> Date: 2026-04-05</span>
+          <span><i class="fas fa-star"></i> Marks: 2%</span>
         </div>
       </div>
 
