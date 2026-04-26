@@ -75,8 +75,9 @@
         <option value="proposal">Project Proposal</option>
         <option value="progress1">Progress Presentation 1</option>
         <option value="progress2">Progress Presentation 2</option>
-        <option value="final">Final Assessment</option>
-        <option value="viva">Viva</option>
+        <option value="ResearchPaper">Research Paper</option>
+        <option value="Final">Final Report & Presentation</option>
+        <option value="checklist">Checklist Documents</option>
       </select>
     </div>
 
@@ -121,29 +122,42 @@
         </div>
       </div>
 
-      <div class="milestone-card" id="final">
-        <div class="milestone-icon"><i class="fas fa-award"></i></div>
-        <h3>Final Assessment</h3>
+      <div class="milestone-card" id="ResearchPaper">
+        <div class="milestone-icon"><i class="fas fa-book-open"></i></div>
+        <h3>Research Paper</h3>
         <p>
-          The final assessment evaluates the complete research project, final system implementation,
-          testing and evaluation, documentation, research contribution, and final deliverables.
+          Includes the final research manuscript with literature, methodology, implementation,
+          evaluation results, and conclusions prepared for formal submission.
         </p>
         <div class="milestone-meta">
           <span><i class="fas fa-calendar"></i> Date: 2026-04-05</span>
-          <span><i class="fas fa-star"></i> Marks: 40%</span>
+          <span><i class="fas fa-star"></i> Marks: Included in Final Assessment</span>
         </div>
       </div>
 
-      <div class="milestone-card" id="viva">
-        <div class="milestone-icon"><i class="fas fa-comments"></i></div>
-        <h3>Viva</h3>
+      <div class="milestone-card" id="Final">
+        <div class="milestone-icon"><i class="fas fa-file-powerpoint"></i></div>
+        <h3>Final Report &amp; Presentation</h3>
         <p>
-          The viva assessment evaluates individual understanding, research knowledge,
-          technical implementation, contribution, problem-solving ability, and presentation confidence.
+          Contains the complete project report and final presentation materials summarizing
+          research outcomes, implementation details, and overall contribution.
         </p>
         <div class="milestone-meta">
-          <span><i class="fas fa-calendar"></i> Date: 2026-04-20</span>
-          <span><i class="fas fa-star"></i> Marks: 15%</span>
+          <span><i class="fas fa-calendar"></i> Date: 2026-04-05</span>
+          <span><i class="fas fa-star"></i> Marks: Included in Final Assessment</span>
+        </div>
+      </div>
+
+      <div class="milestone-card" id="checklist">
+        <div class="milestone-icon"><i class="fas fa-list-check"></i></div>
+        <h3>CheckList Documents</h3>
+        <p>
+          Submission checklists and supporting verification documents required to confirm
+          completeness and compliance with assessment requirements.
+        </p>
+        <div class="milestone-meta">
+          <span><i class="fas fa-calendar"></i> Date: 2026-04-05</span>
+          <span><i class="fas fa-star"></i> Marks: Included in Final Assessment</span>
         </div>
       </div>
 
@@ -167,7 +181,10 @@
     function showMilestone(id) {
       const cards = document.querySelectorAll('.milestone-card');
       cards.forEach(card => card.classList.remove('active'));
-      document.getElementById(id).classList.add('active');
+      const targetCard = document.getElementById(id);
+      if (targetCard) {
+        targetCard.classList.add('active');
+      }
     }
   </script>
 
