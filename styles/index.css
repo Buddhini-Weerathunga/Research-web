@@ -190,7 +190,7 @@ body {
    ============================================================ */
 .hero {
   position: relative;
-  min-height: 100vh;
+  min-height: 80vh;
   display: flex;
   align-items: center;
   padding: 7rem 2rem 4rem;
@@ -203,7 +203,7 @@ body {
   background:
     radial-gradient(ellipse 60% 80% at 60% 50%, rgba(10,50,10,0.7) 0%, transparent 70%),
     radial-gradient(ellipse 80% 60% at 20% 50%, rgba(5,20,5,0.9) 0%, transparent 60%),
-    url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092?q=80&w=1600') center/cover no-repeat;
+    url('../images/background.png') center/cover no-repeat;
   z-index: -1;
 }
 
@@ -284,6 +284,8 @@ body {
   line-height: 1.8;
   margin-bottom: 2.2rem;
 }
+
+
 
 .hero-desc strong { color: var(--white); font-weight: 600; }
 
