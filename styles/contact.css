@@ -14,7 +14,7 @@
   inset: 0;
   background:
     radial-gradient(ellipse 70% 90% at 50% 60%, rgba(10,50,10,0.75), transparent 70%),
-    url("../images/ayurveda-bg.png") center/cover no-repeat;
+    url("../images/background.png") center/cover no-repeat;
   z-index: 0;
 }
 
@@ -220,6 +220,44 @@
   margin-right: 0.4rem;
 }
 
+.contact-form-box form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form-box input,
+.contact-form-box textarea {
+  resize: vertical;
+}
+
+.contact-form-box button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  align-self: flex-start;
+}
+
+.form-status {
+  min-height: 1.2rem;
+  margin-top: 0.85rem;
+  font-family: var(--font-ui);
+  font-size: 0.9rem;
+  color: var(--white-dim);
+}
+
+.form-status.is-loading {
+  color: var(--gold-light);
+}
+
+.form-status.is-success {
+  color: var(--green-light);
+}
+
+.form-status.is-error {
+  color: #ff9b9b;
+}
+
 @media (max-width: 1100px) {
   .contact-wrapper,
   .team-contact-grid {
@@ -232,6 +270,10 @@
   .form-row,
   .team-contact-grid {
     grid-template-columns: 1fr;
+  }
+
+  .contact-form-box button {
+    width: 100%;
   }
 
   .contact-hero {

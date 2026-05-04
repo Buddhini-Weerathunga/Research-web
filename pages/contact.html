@@ -64,9 +64,48 @@
   <!-- ===== CONTACT CONTENT ===== -->
   <section class="contact-section">
 
-   
+    <div class="contact-wrapper">
+      <div class="contact-info-box">
+        <h3>Reach Our Team</h3>
+        <div class="info-item">
+          <i class="fas fa-envelope"></i>
+          <div>
+            <span>Email</span>
+            <p>sandupamasendanayake16@gmail.com</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <i class="fas fa-location-dot"></i>
+          <div>
+            <span>Project</span>
+            <p>AyuCeylon Research Group 25-26J-232</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <i class="fas fa-clock"></i>
+          <div>
+            <span>Response Time</span>
+            <p>We usually reply within 1-2 working days.</p>
+          </div>
+        </div>
+      </div>
 
-
+      <div class="contact-form-box">
+        <h3>Send a Message</h3>
+        <form id="contactForm">
+          <div class="form-row">
+            <input type="text" name="name" placeholder="Your Name" required />
+            <input type="email" name="email" placeholder="Your Email" required />
+          </div>
+          <input type="text" name="title" placeholder="Subject" required />
+          <textarea name="message" rows="6" placeholder="Write your message here..." required></textarea>
+          <button type="submit">
+            <i class="fas fa-paper-plane"></i> Send Message
+          </button>
+          <p class="form-status" id="formStatus" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
 
     <!-- TEAM CONTACTS -->
     <div class="team-contact-area">
@@ -118,6 +157,34 @@
       <p class="footer-copy">&copy; 2025 AyuCeylon. All rights reserved.</p>
     </div>
   </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>
+    (function () {
+      emailjs.init({ publicKey: "CQLUSZ9Rvol3JWFNC" });
+
+      const form = document.getElementById('contactForm');
+      const status = document.getElementById('formStatus');
+
+      if (!form) return;
+
+      form.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        status.textContent = 'Sending your message...';
+        status.className = 'form-status is-loading';
+
+        try {
+          await emailjs.sendForm('service_51eu3nl', 'template_5rqhd9q', form);
+          form.reset();
+          status.textContent = 'Message sent successfully. We will get back to you soon.';
+          status.className = 'form-status is-success';
+        } catch (error) {
+          status.textContent = 'Message could not be sent right now. Please try again later.';
+          status.className = 'form-status is-error';
+        }
+      });
+    })();
+  </script>
 
   
 </body>
